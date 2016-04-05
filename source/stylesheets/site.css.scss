@@ -1,67 +1,125 @@
 @charset "utf-8";
 @import "normalize";
 
-body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+$white: #ffffff;
+$greyDark: #505050;
+$grey: #949494;
+$greyLight: #eaeaea;
+$purple: #586582;
+$blue: #5087E4;
+$green: #88CA90;
+$greenLight: #63D699;
+$nude: #f9e8de;
+
+$varelo: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$weightReg: 400;
+$weightBold: 700;
+
+$oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.half{
+  width:50%;
 }
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
+.alignLeft{
+  float:left;
+}
+
+.alignRight{
+  float:right;
+}
+
+.block{
+  padding: 150px 5% 200px 5%;
+}
+
+.cf{
+  & {
+      *zoom: 1;
+  }
+  &::before,
+  &::after {
+      content: "";
+      display: table;
+  }
+  &::after {
+      clear: both;
+  }
+}
+
+
+body {
+  background: $white;
+  font-family:$oxygen;
+  font-size: 1em;
+  position:relative;
 }
 
 h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $white;
+  font-family:$varelo;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  color: $greenLight;
+  font-family:$varelo;
   font-size: 1.8em;
   font-weight: 400;
   margin: 0;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+h3 {
+  color: $blue;
+  font-family:$varelo;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0;
+}
 
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
+.header{
+  position:absolute;
+  top:0;
+  z-index:1;
+  padding:15px 2.5%;
+  .logo{
+    font-family:$varelo;
+    color:$white;
+    font-size:1.8em;
+  }
+}
+
+.hero{
+  text-align: center;
+  background:$blue;
+  height:100vh;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  .vp{
+    color:$white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:0 5%;
+    max-width:960px;
+    margin:0 auto;
+    p{
+      font-size:1.5em;
     }
   }
 }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
+.how{
+  background: $white;
+  p{
+    color:$grey;
   }
 }
