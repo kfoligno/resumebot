@@ -74,7 +74,7 @@ $oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 20px 0 0 0;
   display: inline-block;
   @include transition(all .2s ease-in-out);
-  &:hover{
+  &:hover, &:focus, &:active{
     background: #848484;
   }
 }
@@ -85,6 +85,14 @@ $oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
   @include transition(all .2s ease-in-out);
   &:hover{
     color: #dcdcdc;
+  }
+}
+
+a{
+  text-decoration: none;
+  outline:none;
+  &:hover, &:focus, &:active{
+    outline:none;
   }
 }
 
@@ -134,6 +142,15 @@ body {
 }
 
 .hero{
+  h1{
+    margin:20px 0 0 0;
+  }
+  img{
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+  }
   background:$greyDark;
   height:100vh;
   -webkit-transform-style: preserve-3d;
@@ -156,14 +173,16 @@ body {
 .how{
   @include clearfix;
   background: $white;
-  .block{
-    padding:200px 5% 100px 5%;
+  &.helps{
+    .block{
+      padding:200px 5% 100px 5%;
+    }
+    .illoLg{
+      background: $greyLight;
+      float:right;
+    }
   }
-  .illoLg{
-    background: $greyLight;
-    float:right;
-  }
-  &:nth-child(even){
+  &.works{
     .illoLg{
       float:left;
     }
