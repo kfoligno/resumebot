@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "normalize";
+@import "bourbon";
 
 //variables
 $white: #ffffff;
@@ -45,35 +46,19 @@ $oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align:center;
 }
 
-.cf{
-  & {
-      *zoom: 1;
-  }
-  &::before,
-  &::after {
-      content: "";
-      display: table;
-  }
-  &::after {
-      clear: both;
-  }
-}
-
 .illoLg{
   width:300px;
   height:300px;
-  -moz-border-radius: 150px;
-  -webkit-border-radius: 150px;
-  border-radius: 150px;
+  @include border-top-radius(150px);
+  @include border-bottom-radius(150px);
   background: $greyLight;
 }
 
 .illoSm{
   width:120px;
   height:120px;
-  -moz-border-radius: 60px;
-  -webkit-border-radius: 60px;
-  border-radius: 60px;
+  @include border-top-radius(60px);
+  @include border-bottom-radius(60px);
   background: $greyLight;
   margin:0 auto 50px auto;
 }
@@ -87,9 +72,19 @@ $oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 60px;
   padding:10px 30px;
   margin: 20px 0 0 0;
-  display:inline-block;
+  display: inline-block;
+  @include transition(all .2s ease-in-out);
   &:hover{
     background: #848484;
+  }
+}
+
+.link{
+  text-decoration: none;
+  color:$greyLight;
+  @include transition(all .2s ease-in-out);
+  &:hover{
+    color: #dcdcdc;
   }
 }
 
@@ -159,6 +154,7 @@ body {
 }
 
 .how{
+  @include clearfix;
   background: $white;
   .block{
     padding:200px 5% 100px 5%;
@@ -184,6 +180,7 @@ body {
 }
 
 .use{
+  @include clearfix;
   .card{
     padding:90px 5% 50px 5%;
     color:$grey;
@@ -195,20 +192,70 @@ body {
 }
 
 .help{
+  @include clearfix;
   padding: 0 5%;
+  margin: 0 0 150px 0;
   h2{
     margin: 0 0 50px 0;
   }
   .question{
+    h3{
+      color:$grey;
+    }
     max-width:960px;
     margin: 20px auto;
     padding:20px 2.5%;
     background: $greyLight;
+    position:relative;
+    span{
+      background:#dcdcdc;
+      display:block;
+      width:30px;
+      height:30px;
+      @include border-top-radius(150px);
+      @include border-bottom-radius(150px);
+      position:absolute;
+      top:20px;
+      right:2.5%;
+      &:before{
+        background:$grey;
+        content:'';
+        width:10px;
+        height:2px;
+        display:block;
+        top:13px;
+        left:10px;
+        position:absolute;
+      }
+    }
+    &.closed{
+      span{
+        &:after{
+          background:$grey;
+          content:'';
+          height:10px;
+          width:2px;
+          display:block;
+          position:absolute;
+          left:14px;
+          top:9px
+        }
+      }
+    }
   }
   p{
     margin: 15px 0 0 0;
   }
   ul{
     padding:0 2.5%;
+    color:$grey;
+  }
+}
+
+.footer{
+  padding: 150px 0;
+  background: $greyDark;
+  p{
+    color:$grey;
   }
 }

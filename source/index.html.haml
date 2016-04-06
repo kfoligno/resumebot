@@ -9,7 +9,7 @@ title: Welcome to Middleman
     %h1  Format résumés faster.
     %p ResumeBot is a tool to help recruiters format resumes faster. Tasks like organizing content, adding bullets, and styling text are automated and completed within minutes.
     = link_to 'Learn More', '#', class: 'btn'
-.how.cf
+.how
   .half.alignLeft.block
     %h2 How ResumeBot Helps Recruiters
     %p Adecco recruiters spend hundreds of hours every quarter parsing and transcribing resumes. ResumeBot can do 80% of that work by stripping away formatting and organizing the information in a standard layout. From there, recruiters can easily format it according to their specific needs. This gives recruiters more time to focus on qualifying and placing candidates.
@@ -23,7 +23,7 @@ title: Welcome to Middleman
     %p ResumeBot is a robot, not a human. When you attach a resume to an email to ResumeBot, it pulls the text, organizes and formats the resume, and emails you both the original and converted files within 1 minutes and 30 seconds. If there is no text (because the file is image-based; a scan or a photo for instance), ResumeBot will return an error message. Sorry. It’s only a robot. That’s all it’s programmed to do.
 
 
-.use.cf
+.use
   %h2.centered How to Use ResumeBot
   .oneThird.alignLeft.card
     .illoSm
@@ -40,23 +40,36 @@ title: Welcome to Middleman
   %h2.centered FAQ
   .question
     %h3 What kind of files can ResumeBot parse?
+    %span
     .answer
       %ul
         %li Adobe Portable Documents (.pdf)
         %li Microsoft Word Documents (.doc)
         %li Rich Text Format (.rtf)
         %li Text Files (.txt)
-  .question
+  .question.closed
     %h3 Are there limitations that I should be aware of?
-  .question
+    %span
+  .question.closed
     %h3 What are the technical requirements?
-  .question
+    %span
+  .question.closed
     %h3 Is there a knowledge base for training and promotional materials for ResumeBot?
-  .question
+    %span
+  .question.closed
     %h3 ResumeBot won't format the file I submitted. What gives?
-  .question
+    %span
+  .question.closed
     %h3 Why does ResumeBot move or drop some information?
-  .question
+    %span
+  .question.closed
     %h3 Does ResumeBot check spelling and grammar?
-  .question
+    %span
+  .question.closed
     %h3 What can candidates do to ensure their resumes are machine-readable?
+    %span
+
+
+.footer.centered
+  .illoSm
+  %p Developed by #{link_to 'Ignite', '#', class: 'link'}, the innovation lab for Adecco Group
