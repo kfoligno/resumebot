@@ -14,3 +14,7 @@ $(function() {
     }
   });
 });
+
+$("accordion").click(function(){
+    $("panel").toggleClass("show");
+});

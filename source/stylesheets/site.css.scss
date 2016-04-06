@@ -271,6 +271,13 @@ body {
   }
 }
 
+.panel{
+  display:none;
+  &.show{
+    display:block!important;
+  }
+}
+
 .footer{
   padding: 150px 0;
   background: $greyDark;
