@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "normalize";
 
+//variables
 $white: #ffffff;
 $greyDark: #505050;
 $grey: #949494;
@@ -17,6 +18,7 @@ $weightBold: 700;
 
 $oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+//global
 *{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -57,14 +59,41 @@ $oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
 
-
-body {
-  background: $white;
-  font-family:$oxygen;
-  font-size: 1em;
-  position:relative;
+.illoLg{
+  width:300px;
+  height:300px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+  background: $greyLight;
 }
 
+.illoSm{
+  width:120px;
+  height:120px;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  background: $greyLight;
+  margin:0 auto 50px auto;
+}
+
+.btn{
+  text-decoration: none;
+  color:$white;
+  background:$grey;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  padding:10px 30px;
+  margin: 20px 0 0 0;
+  display:inline-block;
+  &:hover{
+    background: #848484;
+  }
+}
+
+//typography
 h1 {
   color: $white;
   font-family:$varelo;
@@ -87,6 +116,14 @@ h3 {
   font-size: 1.2em;
   font-weight: 400;
   margin: 0;
+}
+
+//styles
+body {
+  background: $white;
+  font-family:$oxygen;
+  font-size: 1em;
+  position:relative;
 }
 
 .header{
@@ -119,25 +156,6 @@ h3 {
       font-size:1.5em;
     }
   }
-}
-
-.illoLg{
-  width:300px;
-  height:300px;
-  -moz-border-radius: 150px;
-  -webkit-border-radius: 150px;
-  border-radius: 150px;
-  background: $greyLight;
-}
-
-.illoSm{
-  width:120px;
-  height:120px;
-  -moz-border-radius: 60px;
-  -webkit-border-radius: 60px;
-  border-radius: 60px;
-  background: $greyLight;
-  margin:0 auto 50px auto;
 }
 
 .how{
