@@ -167,8 +167,12 @@ h3 {
 
 .use{
   .card{
-    padding:90px 5% 200px 5%;
+    padding:90px 5% 50px 5%;
     color:$grey;
+  }
+  .note{
+    padding:0 5% 200px 5%;
+    color: $grey;
   }
 }
 
