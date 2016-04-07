@@ -207,6 +207,8 @@ body {
   .note{
     padding:0 5% 200px 5%;
     color: $grey;
+    margin:0 auto;
+    max-width:800px;
   }
 }
 
@@ -246,24 +248,35 @@ body {
         left:10px;
         position:absolute;
       }
-    }
-    &.closed{
-      span{
-        &:after{
-          background:$grey;
-          content:'';
-          height:10px;
-          width:2px;
-          display:block;
-          position:absolute;
-          left:14px;
-          top:9px
-        }
+      &:after{
+        background:$grey;
+        content:'';
+        height:10px;
+        width:2px;
+        display:block;
+        position:absolute;
+        left:14px;
+        top:9px
       }
     }
+    // &.closed{
+    //   span{
+    //     &:after{
+    //       background:$grey;
+    //       content:'';
+    //       height:10px;
+    //       width:2px;
+    //       display:block;
+    //       position:absolute;
+    //       left:14px;
+    //       top:9px
+    //     }
+    //   }
+    // }
   }
   p{
     margin: 15px 0 0 0;
+    color:$grey;
   }
   ul{
     padding:0 2.5%;
@@ -271,7 +284,11 @@ body {
   }
 }
 
-.panel{
+.accordion{
+  cursor:pointer;
+}
+
+.answer{
   display:none;
   &.show{
     display:block!important;

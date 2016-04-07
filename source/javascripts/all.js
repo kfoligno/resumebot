@@ -15,6 +15,6 @@ $(function() {
   });
 
   $(".accordion").click(function(){
-      $(this).siblings('.panel').slideToggle("fast");
+      $(this).siblings('.answer').slideToggle("fast");
   });
 });
