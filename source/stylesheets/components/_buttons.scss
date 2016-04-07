@@ -1,0 +1,15 @@
+.btn{
+  text-decoration: none;
+  color:$white;
+  background:$grey;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  padding:10px 30px;
+  margin: 20px 0 0 0;
+  display: inline-block;
+  @include transition(all .2s ease-in-out);
+  &:hover, &:focus, &:active{
+    background: #848484;
+  }
+}

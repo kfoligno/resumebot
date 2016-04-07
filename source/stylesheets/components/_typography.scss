@@ -1,0 +1,47 @@
+body {
+  background: $white;
+  font-family:$oxygen;
+  font-size: 1em;
+  position:relative;
+}
+
+h1 {
+  color: $white;
+  font-family:$varelo;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  color: $greyDark;
+  font-family:$varelo;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  color: $greyDark;
+  font-family:$varelo;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  outline:none;
+  &:hover, &:focus, &:active{
+    outline:none;
+  }
+}
+
+.link{
+  text-decoration: none;
+  color:$greyLight;
+  @include transition(all .2s ease-in-out);
+  &:hover{
+    color: #dcdcdc;
+  }
+}
