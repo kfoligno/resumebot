@@ -130,6 +130,14 @@ h3 {
 }
 
 //styles
+.fade{
+  @include animation(fadeIn 2s ease-in);
+}
+
+.slow{
+  @include animation(fadeIn 5s ease-in);
+}
+
 .header{
   position:absolute;
   top:0;
