@@ -1,133 +1,14 @@
 @charset "utf-8";
 @import "normalize";
 @import "bourbon";
-
-//variables
-$white: #ffffff;
-$greyDark: #505050;
-$grey: #949494;
-$greyLight: #eaeaea;
-$purple: #586582;
-$blue: #5087E4;
-$green: #88CA90;
-$greenLight: #63D699;
-$nude: #f9e8de;
-
-$varelo: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$weightReg: 400;
-$weightBold: 700;
-
-$oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-//global
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-//grid
-.half{
-  width:50%;
-}
-
-.oneThird{
-  width:33.3%;
-}
-
-.alignLeft{
-  float:left;
-}
-
-.alignRight{
-  float:right;
-}
-
-.centered{
-  text-align:center;
-}
-
-.illoLg{
-  width:300px;
-  height:300px;
-  @include border-top-radius(150px);
-  @include border-bottom-radius(150px);
-  background: $greyLight;
-}
-
-.illoSm{
-  width:120px;
-  height:120px;
-  @include border-top-radius(60px);
-  @include border-bottom-radius(60px);
-  background: $greyLight;
-  margin:0 auto 50px auto;
-}
-
-.btn{
-  text-decoration: none;
-  color:$white;
-  background:$grey;
-  -moz-border-radius: 60px;
-  -webkit-border-radius: 60px;
-  border-radius: 60px;
-  padding:10px 30px;
-  margin: 20px 0 0 0;
-  display: inline-block;
-  @include transition(all .2s ease-in-out);
-  &:hover, &:focus, &:active{
-    background: #848484;
-  }
-}
-
-//typography
-body {
-  background: $white;
-  font-family:$oxygen;
-  font-size: 1em;
-  position:relative;
-}
-
-.link{
-  text-decoration: none;
-  color:$greyLight;
-  @include transition(all .2s ease-in-out);
-  &:hover{
-    color: #dcdcdc;
-  }
-}
-
-a{
-  text-decoration: none;
-  outline:none;
-  &:hover, &:focus, &:active{
-    outline:none;
-  }
-}
-
-h1 {
-  color: $white;
-  font-family:$varelo;
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 0;
-}
-
-h2 {
-  color: $greyDark;
-  font-family:$varelo;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0;
-}
-
-h3 {
-  color: $greyDark;
-  font-family:$varelo;
-  font-size: 1.2em;
-  font-weight: 400;
-  margin: 0;
-}
+@import "settings";
+@import "components/accordion";
+@import "components/buttons";
+@import "components/footer";
+@import "components/grid";
+@import "components/lists";
+@import "components/typography";
+@import "pages/landing";
 
 //styles
 .fade{
@@ -289,25 +170,6 @@ h3 {
   }
   ul{
     padding:0 2.5%;
-    color:$grey;
-  }
-}
-
-.accordion{
-  cursor:pointer;
-}
-
-.answer{
-  display:none;
-  &.show{
-    display:block!important;
-  }
-}
-
-.footer{
-  padding: 150px 0;
-  background: $greyDark;
-  p{
     color:$grey;
   }
 }
