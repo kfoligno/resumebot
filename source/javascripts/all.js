@@ -17,4 +17,15 @@ $(function() {
   $(".accordion").click(function(){
       $(this).siblings('.answer').slideToggle("fast");
   });
+
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 10) {
+          $(".nav").addClass("scrolled");
+      } else {
+          $(".nav").removeClass("scrolled");
+      }
+  });
+
 });

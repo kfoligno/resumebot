@@ -42,3 +42,15 @@ a{
     color: #dcdcdc;
   }
 }
+
+ul{
+  li{
+    a{
+      color: $purple;
+      opacity: .7;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+}
