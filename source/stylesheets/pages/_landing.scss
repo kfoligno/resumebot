@@ -1,10 +1,10 @@
-.illoLg{
-  width:300px;
-  height:300px;
-  @include border-top-radius(150px);
-  @include border-bottom-radius(150px);
-  background: $greyLight;
-}
+// .illoLg{
+//   width:300px;
+//   height:300px;
+//   @include border-top-radius(150px);
+//   @include border-bottom-radius(150px);
+//   background: $greyLight;
+// }
 
 .illoSm{
   width:120px;
@@ -16,18 +16,28 @@
 }
 
 .header{
-  position:absolute;
+  @include clearfix;
+  padding:30px 10%;
+  position:fixed;
   top:0;
-  z-index:1;
-  padding:15px 2.5%;
+  width:100%;
+  background:$white;
+  z-index: 400;
   .logo{
     font-family:$varelo;
-    color:$white;
+    color:$purple;
     font-size:1.8em;
   }
 }
 
 .hero{
+  background-image:url('/images/shapes-hero-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height:100vh;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   h1{
     margin:20px 0 0 0;
   }
@@ -37,21 +47,18 @@
     display: block;
     margin: 0 auto;
   }
-  background:$greyDark;
-  height:100vh;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   .vp{
-    color:$white;
+    color:$grey;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     padding:0 5%;
-    max-width:960px;
-    margin:0 auto;
     p{
-      font-size:1.5em;
+      font-size:1.6em;
+      margin: 25px auto 50px auto;
+      font-weight: $weightLight;
+      max-width:900px;
+      line-height:1.6em;
     }
   }
 }
@@ -79,7 +86,7 @@
   p{
     color:$grey;
     max-width:500px;
-    font-size:1.2em;
+    font-size:1.3em;
     line-height:1.5;
   }
 }

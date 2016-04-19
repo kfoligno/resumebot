@@ -1,7 +1,9 @@
 .btn{
+  font-size:1.2em;
+  font-weight: $weightLight;
   text-decoration: none;
   color:$white;
-  background:$grey;
+  background:$green;
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
   border-radius: 60px;
@@ -10,6 +12,6 @@
   display: inline-block;
   @include transition(all .2s ease-in-out);
   &:hover, &:focus, &:active{
-    background: #848484;
+    opacity: .9;
   }
 }

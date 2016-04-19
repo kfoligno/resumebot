@@ -1,20 +1,27 @@
 //colors
-$white: #ffffff;
+$white: #FFFFFF;
 $greyDark: #505050;
 $grey: #949494;
-$greyLight: #eaeaea;
+$greyLight: #EAEAEA;
 $purple: #586582;
-$blue: #5087E4;
+$purpleLight: #DBB9F8;
+$blue: #83C1E6;
+$blueLight: #F2F8FC;
 $green: #88CA90;
-$greenLight: #63D699;
-$nude: #f9e8de;
+$greenLight: #B8E986;
+$yellow: #FDD166;
+$red: #FC776D;
+$orange: #FFA253;
 
 //fonts
 $varelo: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $weightReg: 400;
 $weightBold: 700;
 
-$oxygen: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$openSans: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$weightReg: 400;
+$weightLight: 100;
+$styleItalic: italic;
 
 //global
 *{

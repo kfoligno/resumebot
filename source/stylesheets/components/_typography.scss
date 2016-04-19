@@ -1,22 +1,19 @@
 body {
-  background: $white;
-  font-family:$oxygen;
+  font-family:$openSans;
   font-size: 1em;
   position:relative;
 }
 
 h1 {
-  color: $white;
+  color: $greyDark;
   font-family:$varelo;
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 0;
+  font-size: 3em;
 }
 
 h2 {
   color: $greyDark;
   font-family:$varelo;
-  font-size: 1.8em;
+  font-size: 1.7em;
   font-weight: 400;
   margin: 0;
 }

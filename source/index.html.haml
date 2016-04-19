@@ -1,18 +1,16 @@
 ---
 title: ResumeBot Converts Resumes from PDF
 ---
-
+#top
 .header
-  .logo.fade RésuméBot
+  = link_to 'RésuméBot', '#top', class: 'logo'
 
 .hero.centered
-  .vp.fade
+  .vp.container
     %img{:src => "/images/logo.gif"}
     %h1  Format résumés faster.
     %p ResumeBot is a tool to help recruiters format resumes faster. Tasks like organizing content, adding bullets, and styling text are automated and completed within minutes.
-    = link_to 'How it works', '#howitworks', class: 'btn'
-
-#howitworks
+    = link_to 'Get Started', '#howtouse', class: 'btn'
 
 .how.helps
   .half.alignLeft.block
@@ -27,6 +25,7 @@ title: ResumeBot Converts Resumes from PDF
   .half.alignLeft.block
     %h2 How ResumeBot Works
     %p ResumeBot is a robot, not a human. When you attach a resume to an email to ResumeBot, it pulls the text, organizes and formats the resume, and emails you both the original and converted files within 1 minutes and 30 seconds. If there is no text (because the file is image-based; a scan or a photo for instance), ResumeBot will return an error message. Sorry. It’s only a robot. That’s all it’s programmed to do.
+    #howtouse
 
 .use
   %h2.centered How to Use ResumeBot
