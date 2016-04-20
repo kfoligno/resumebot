@@ -16,7 +16,7 @@ title: ResumeBot Converts Resumes from PDF
 
 .hero.centered
   .vp.container
-    %img{:src => "/images/logo.gif"}
+    = image_tag '/images/logo.gif'
     %h1  Format résumés faster.
     %p ResumeBot is a tool to help recruiters format resumes faster. Tasks like organizing content, adding bullets, and styling text are automated and completed within minutes.
     = link_to 'Get Started', '#howtouse', class: 'btn'
@@ -28,7 +28,7 @@ title: ResumeBot Converts Resumes from PDF
     %p Adecco recruiters spend hundreds of hours every quarter parsing and transcribing resumes. ResumeBot can do 80% of that work by stripping away formatting and organizing the information in a standard layout. From there, recruiters can easily format it according to their specific needs. This gives recruiters more time to focus on qualifying and placing candidates.
   .half.alignLeft.block
     .illoLg
-      %img{:src => "/images/illo-recruiter.png"}
+      = image_tag'/images/illo-recruiter.png'
 
 .how.works.container
   .half.alignLeft.block.copy
@@ -36,7 +36,7 @@ title: ResumeBot Converts Resumes from PDF
     %p ResumeBot is a robot, not a human. When you attach a resume to an email to ResumeBot, it pulls the text, organizes and formats the resume, and emails you both the original and converted files within 1 minutes and 30 seconds. If there is no text (because the file is image-based; a scan or a photo for instance), ResumeBot will return an error message. Sorry. It’s only a robot. That’s all it’s programmed to do.
   .half.alignLeft.block
     .illoLg
-      %img{:src => "/images/illo-resumebot.png"}
+      = image_tag '/images/illo-resumebot.png'
 
 #howtouse
 .use.container
@@ -44,15 +44,15 @@ title: ResumeBot Converts Resumes from PDF
   .row
     .oneThird.alignLeft.col
       .illoSm
-        %img{:src => "/images/illo-email@2x.png"}
+        = image_tag '/images/illo-email@2x.png'
       %p.centered= "Attach resume files to an email and send it to #{link_to 'resumes@resumebot.io', 'mailto:resumes@resumebot.io'} from an Adecco domain email. (We're still in beta.)"
     .oneThird.alignLeft.col
       .illoSm
-        %img{:src => "/images/illo-watch@2x.png"}
+        = image_tag '/images/illo-watch@2x.png'
       %p.centered In about 1 minute, ResumeBot will return an email with the original and formatted files for each resume you attached.
     .oneThird.alignLeft.col
       .illoSm
-        %img{:src => "/images/illo-clipboard@2x.png"}
+        = image_tag '/images/illo-clipboard@2x.png'
       %p.centered Review the files and make additional tweaks if needed. Because ResumeBot is just a robot, you should always proof your converted files.
   %p.centered.note NOTE: ResumeBot typically returns files within 30 seconds, but the process may take longer depending upon your email provider.
 
@@ -73,16 +73,17 @@ title: ResumeBot Converts Resumes from PDF
       %h3
         = link_to 'Are there limitations that I should be aware of?', '#accordion-2', class: 'accordionTitle'
       #accordion-2.accordionContent
-        %ul
-          %li
-            %strong Dates:
-            ResumeBot gets confused by the variety of ways people express date ranges, so always double check dates.
-          %li
-            %strong Affilliations & Skills:
-            Because of the variety of vocabularies used on resumes, double-check items listed in the bulletlists for anything out of place.
-          %li
-            %strong Language:
-            Currently, ResumeBot is only equipped to convert English language documents.
+        %p
+          %strong Dates:
+          ResumeBot gets confused by the variety of ways people express date ranges, so always double check dates.
+        %br
+        %p
+          %strong Affilliations & Skills:
+          Because of the variety of vocabularies used on resumes, double-check items listed in the bulletlists for anything out of place.
+        %br
+        %p
+          %strong Language:
+          Currently, ResumeBot is only equipped to convert English language documents.
     .accordionSection
       %h3
         = link_to 'What are the technical requirements?', '#accordion-3', class: 'accordionTitle'
@@ -92,7 +93,7 @@ title: ResumeBot Converts Resumes from PDF
       %h3
         = link_to 'Where can I find training and promotional materials for ResumeBot?', '#accordion-4', class: 'accordionTitle'
       #accordion-4.accordionContent
-        %p= "Find everything you need to start using ResumeBot in the #{link_to 'Knowledge Base', 'resumebot.uservoice.com', target:'_blank'}."
+        %p= "Find everything you need to start using ResumeBot in the #{link_to 'Knowledge Base', 'https://resumebot.uservoice.com/knowledgebase', target: '_blank'}."
     .accordionSection
       %h3
         = link_to "ResumeBot won't format the file I submitted. What gives?", '#accordion-5', class: 'accordionTitle'
@@ -114,7 +115,7 @@ title: ResumeBot Converts Resumes from PDF
       %h3
         = link_to 'What can candidates do to ensure their resumes are machine-readable?', '#accordion-8', class: 'accordionTitle'
       #accordion-8.accordionContent
-        %p= "#{link_to 'View tips', 'https://sovren.com/faq/TipsForElectronicResumes.pdf', target:'_blank'} for electronic resumes."
+        %p= "#{link_to 'View tips', 'https://sovren.com/faq/TipsForElectronicResumes.pdf', target: '_blank'} for electronic resumes."
 
 #testimonials
 .testimonials.container
@@ -134,5 +135,6 @@ title: ResumeBot Converts Resumes from PDF
       %p.people Christine Schulte, Recruiter
 
 .footer.centered
-  .illoSm
+  .logomark
+    = image_tag '/images/ignite-logomark.png'
   %p Developed by #{link_to 'Ignite', '#', class: 'link'}, the innovation lab for Adecco Group

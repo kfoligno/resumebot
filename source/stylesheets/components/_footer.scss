@@ -1,10 +1,14 @@
 .footer{
-  padding: 150px 0;
-  background: $purple;
+  padding: 200px 0;
+  background-color: $purple;
+  background-image:url('/images/shapes-footer.png');
+  background-position: center;
+  background-repeat: no-repeat;
   p{
     color:$white;
     font-weight: $weightLight;
-    padding:0 5%;
+    padding:45px 5% 0 5%;
+    margin:0;
   }
   a{
     color:$green;
