@@ -33,9 +33,13 @@
   display:none;
   ul, p{
     font-size: 1.2em;
+    line-height: 1.5;
     font-weight: $weightLight;
     color: $grey;
     margin:0;
+    @media screen and (max-width: $breakSmall) {
+      font-size:1.1em;
+    }
   }
 }
 

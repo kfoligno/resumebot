@@ -8,7 +8,14 @@
     width: 64px;
     height: 54px;
     left: 20%;
+    top:70px;
     position: absolute;
+    @media screen and (max-width: $breakXLarge) {
+      left:10%;
+    }
+    @media screen and (max-width: $breakLarge) {
+      left:0;
+    }
   }
   &:after{
     content:'';
@@ -18,8 +25,17 @@
     width: 64px;
     height: 54px;
     right: 20%;
-    bottom:20px;
+    bottom:70px;
     position: absolute;
+    @media screen and (max-width: $breakXLarge) {
+      right:10%;
+    }
+    @media screen and (max-width: $breakLarge) {
+      right:0;
+    }
+    @media screen and (max-width: $breakSmall) {
+      display:none;
+    }
   }
 }
 

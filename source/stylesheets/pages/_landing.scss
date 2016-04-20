@@ -1,19 +1,4 @@
-.illoLg{
-  img{
-    max-width:400px;
-    height:auto;
-    width:100%;
-  }
-}
 
-.illoSm{
-  margin:0 auto 50px auto;
-  text-align: center;
-  img{
-    width:200px;
-    height:auto;
-  }
-}
 
 .header{
   @include clearfix;
@@ -27,6 +12,9 @@
     @include transition(all .2s ease-in-out);
     border-bottom: 1px solid transparent;
     background: transparent;
+    @media screen and (max-width: $breakSmall) {
+      text-align: center;
+    }
     &.scrolled{
       padding:20px 5%;
       border-bottom: 1px solid $greyLight;
@@ -47,6 +35,9 @@
           margin-left:25px;
         }
       }
+      @media screen and (max-width: $breakSmall) {
+        display:none;
+      }
     }
     .logo{
       font-family:$varelo;
@@ -66,6 +57,14 @@
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  @media screen and (max-height: $breakHeight) {
+    height:auto;
+    padding:100px 5%;
+  }
+  @media screen and ( min-width: 1024px ) and ( max-height: 768px ){
+      height:100vh;
+      padding:0;
+  }
   h1{
     margin:20px 0 0 0;
   }
@@ -80,14 +79,45 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    padding:0 5%;
+    padding:0;
+    @media screen and (max-height: $breakHeight) {
+      top: 0;
+      transform: none;
+    }
+    @media screen and ( min-width: 1024px ) and ( max-height: 768px ){
+      top: 50%;
+      transform: translateY(-50%);
+    }
     p{
       font-size:1.6em;
       margin: 25px auto 35px auto;
       font-weight: $weightLight;
       max-width:900px;
-      line-height:1.6em;
+      line-height:1.6;
+      @media screen and (max-width: $breakXSmall) {
+        font-size:1.2em;
+      }
     }
+  }
+}
+
+.illoLg{
+  img{
+    max-width:400px;
+    height:auto;
+    width:100%;
+  }
+  @media screen and (max-width: $breakMedium) {
+    text-align:center;
+  }
+}
+
+.illoSm{
+  margin:0 auto 50px auto;
+  text-align: center;
+  img{
+    width:200px;
+    height:auto;
   }
 }
 
@@ -97,17 +127,32 @@
   &.helps{
     .block{
       padding:200px 5% 100px 5%;
+      @media screen and (max-width: $breakMedium) {
+        padding:0 5%;
+      }
     }
     .illoLg{
       float:right;
+      @media screen and (max-width: $breakMedium) {
+        float:none;
+      }
     }
   }
   &.works{
     .illoLg{
       float:left;
+      @media screen and (max-width: $breakMedium) {
+        float:none;
+      }
+    }
+    .copy{
+      float:right;
     }
     .block{
       padding:100px 5% 50px 5%;
+      @media screen and (max-width: $breakMedium) {
+        padding:0 5%;
+      }
     }
   }
   p{
@@ -115,15 +160,36 @@
     font-size:1.3em;
     line-height:1.6;
     font-weight: $weightLight;
+    @media screen and (max-width: $breakXSmall) {
+      font-size: 1.2em;
+    }
   }
+  .block{
+    @media screen and (max-width: $breakMedium) {
+      width:100%;
+      float:none;
+    }
+    &.copy{
+      @media screen and (max-width: $breakMedium) {
+        padding:100px 5% 30px 5%;
+      }
+    }
+  }
+
 }
 
 .use{
-  padding:150px 0 0 0;
+  padding:150px 0 50px 0;
   @include clearfix;
   font-size:1.13em;
   font-weight: $weightLight;
   line-height: 1.5;
+  @media screen and (max-width: $breakMedium) {
+    padding:150px 0 0 0;
+  }
+  @media screen and (max-width: $breakXSmall) {
+    font-size:1.2em;
+  }
   .col{
     padding:90px 5% 50px 5%;
     color:$grey;
@@ -131,26 +197,43 @@
       max-width:290px;
       margin:0 auto;
     }
+    @media screen and (max-width: $breakSmall) {
+      width:100%;
+      padding:50px 5%;
+      p{
+        max-width:560px;
+      }
+    }
   }
   .note{
-    padding:0 5% 0 5%;
+    padding: 20px 2.5%;
     color: $grey;
-    margin:0 auto;
-    max-width:960px;
+    margin: 30px auto 0 auto;
+    max-width: 800px;
+    background: #F7F7F7;
+    border-radius: 5px;
+    @media screen and (max-width: $breakSmall) {
+      max-width:560px;
+    }
   }
 }
 
 .help{
   @include clearfix;
-  padding: 200px 5% 0 5%;
+  padding: 150px 5% 0 5%;
+  @media screen and (max-width: $breakMedium) {
+    padding: 150px 0 0 0;
+  }
   h2{
     margin: 0 0 50px 0;
   }
 }
 
 .testimonials{
-  padding-top: 200px;
-  padding-bottom:150px;
+  padding:200px 0 150px 0;
+  @media screen and (max-width: $breakMedium) {
+    padding:150px 0 150px 0;
+  }
   .quoteSlide{
     margin:90px auto 30px auto;
   }
@@ -160,10 +243,17 @@
     font-size:1.8em;
     font-weight: $weightLight;
     color: $grey;
+    @media screen and (max-width: $breakXSmall) {
+      font-size:1.3em;
+    }
   }
   .people{
     font-size:1.75em;
     color: $blue;
     margin-bottom:0;
+    font-weight: $weightLight;
+    @media screen and (max-width: $breakXSmall) {
+      font-size:1.2em;
+    }
   }
 }

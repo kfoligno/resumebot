@@ -9,6 +9,9 @@ h1 {
   font-family:$varelo;
   font-weight: $weightReg;
   font-size: 3em;
+  @media screen and (max-width: $breakXSmall) {
+    font-size:2.5em;
+  }
 }
 
 h2 {
@@ -17,6 +20,9 @@ h2 {
   font-size: 1.75em;
   font-weight: 400;
   margin: 0;
+  @media screen and (max-width: $breakXSmall) {
+    font-size:1.5em;
+  }
 }
 
 h3 {
@@ -27,6 +33,9 @@ h3 {
   margin: 0;
   a{
     color: $purple;
+  }
+  @media screen and (max-width: $breakXSmall) {
+    font-size:1.2em;
   }
 }
 
@@ -45,19 +54,6 @@ a{
   @include transition(all .2s ease-in-out);
   &:hover{
     color: #dcdcdc;
-  }
-}
-
-ul{
-  margin: 0;
-  li{
-    a{
-      color: $purple;
-      opacity: .7;
-      &:hover{
-        opacity: 1;
-      }
-    }
   }
 }
 

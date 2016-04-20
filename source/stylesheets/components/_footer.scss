@@ -1,7 +1,15 @@
 .footer{
   padding: 150px 0;
-  background: $greyDark;
+  background: $purple;
   p{
-    color:$grey;
+    color:$white;
+    font-weight: $weightLight;
+    padding:0 5%;
+  }
+  a{
+    color:$green;
+    &:hover{
+      color:$greenLight;
+    }
   }
 }
