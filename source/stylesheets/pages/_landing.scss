@@ -143,8 +143,27 @@
 .help{
   @include clearfix;
   padding: 200px 5% 0 5%;
-  margin-bottom:200px;
   h2{
     margin: 0 0 50px 0;
+  }
+}
+
+.testimonials{
+  padding-top: 200px;
+  padding-bottom:150px;
+  .quoteSlide{
+    margin:90px auto 30px auto;
+  }
+  .quote{
+    max-width:680px;
+    margin:0 auto;
+    font-size:1.8em;
+    font-weight: $weightLight;
+    color: $grey;
+  }
+  .people{
+    font-size:1.75em;
+    color: $blue;
+    margin-bottom:0;
   }
 }
