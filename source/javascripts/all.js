@@ -1,6 +1,5 @@
 //= require jquery
-
-$(function() {
+$(document).ready(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -14,9 +13,32 @@ $(function() {
     }
   });
 
-  $(".accordion").click(function(){
-      $(this).siblings('.answer').slideToggle("fast");
-  });
+  $(function() {
+    function close_accordion_section() {
+        $('.accordion .accordionTitle').removeClass('active');
+        $('.accordion .accordionContent').slideUp(300).removeClass('open');
+    }
+
+    $('.accordionTitle').click(function(e) {
+        // Grab current anchor value
+        var currentAttrValue = $(this).attr('href');
+
+        if($(e.target).is('.active')) {
+            close_accordion_section();
+        }else {
+            close_accordion_section();
+
+            // Add active class to section title
+            $(this).addClass('active');
+            // Open up the hidden content panel
+            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+        }
+
+        e.preventDefault();
+    });
+});
+
+
 
   $(window).scroll(function() {
       var scroll = $(window).scrollTop();

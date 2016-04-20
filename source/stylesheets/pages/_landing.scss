@@ -15,7 +15,6 @@
   }
 }
 
-
 .header{
   @include clearfix;
   .nav{
@@ -122,86 +121,30 @@
 .use{
   padding:150px 0 0 0;
   @include clearfix;
-  .card{
+  font-size:1.13em;
+  font-weight: $weightLight;
+  line-height: 1.5;
+  .col{
     padding:90px 5% 50px 5%;
     color:$grey;
+    p{
+      max-width:290px;
+      margin:0 auto;
+    }
   }
   .note{
     padding:0 5% 0 5%;
     color: $grey;
     margin:0 auto;
-    max-width:800px;
+    max-width:960px;
   }
 }
 
 .help{
   @include clearfix;
   padding: 200px 5% 0 5%;
-  margin: 0 0 150px 0;
+  margin-bottom:200px;
   h2{
     margin: 0 0 50px 0;
-  }
-  .question{
-    h3{
-      color:$grey;
-    }
-    max-width:960px;
-    margin: 20px auto;
-    padding:20px 2.5%;
-    background: $greyLight;
-    position:relative;
-    span{
-      background:#dcdcdc;
-      display:block;
-      width:30px;
-      height:30px;
-      @include border-top-radius(150px);
-      @include border-bottom-radius(150px);
-      position:absolute;
-      top:20px;
-      right:2.5%;
-      &:before{
-        background:$grey;
-        content:'';
-        width:10px;
-        height:2px;
-        display:block;
-        top:13px;
-        left:10px;
-        position:absolute;
-      }
-      &:after{
-        background:$grey;
-        content:'';
-        height:10px;
-        width:2px;
-        display:block;
-        position:absolute;
-        left:14px;
-        top:9px
-      }
-    }
-    // &.closed{
-    //   span{
-    //     &:after{
-    //       background:$grey;
-    //       content:'';
-    //       height:10px;
-    //       width:2px;
-    //       display:block;
-    //       position:absolute;
-    //       left:14px;
-    //       top:9px
-    //     }
-    //   }
-    // }
-  }
-  p{
-    margin: 15px 0 0 0;
-    color:$grey;
-  }
-  ul{
-    padding:0 2.5%;
-    color:$grey;
   }
 }

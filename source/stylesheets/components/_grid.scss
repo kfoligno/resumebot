@@ -1,3 +1,7 @@
+.row{
+  @include clearfix;
+}
+
 .half{
   width:50%;
 }

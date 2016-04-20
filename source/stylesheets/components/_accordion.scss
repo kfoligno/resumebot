@@ -1,5 +1,42 @@
 .accordion{
-  cursor:pointer;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+.accordionSection{
+  margin-bottom:30px;
+  background: $blueLight;
+  border-radius:5px;
+  &:last-child{
+    margin-bottom:0;
+  }
+}
+
+.accordionTitle{
+  width:100%;
+  padding:30px;
+  display:inline-block;
+  @include transition(all .15s linear);
+  opacity: .75;
+  &:hover{
+    opacity: 1;
+  }
+  &.active{
+    opacity:1;
+  }
+}
+
+.accordionContent{
+  padding:0 30px 30px 30px;
+  display:none;
+  ul, p{
+    font-size: 1.2em;
+    font-weight: $weightLight;
+    color: $grey;
+    margin:0;
+  }
 }
 
 .answer{

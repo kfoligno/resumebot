@@ -7,28 +7,33 @@ body {
 h1 {
   color: $greyDark;
   font-family:$varelo;
+  font-weight: $weightReg;
   font-size: 3em;
 }
 
 h2 {
   color: $greyDark;
   font-family:$varelo;
-  font-size: 1.7em;
+  font-size: 1.75em;
   font-weight: 400;
   margin: 0;
 }
 
 h3 {
-  color: $greyDark;
+  color: $purple;
   font-family:$varelo;
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: 400;
   margin: 0;
+  a{
+    color: $purple;
+  }
 }
 
 a{
   text-decoration: none;
   outline:none;
+  color: $green;
   &:hover, &:focus, &:active{
     outline:none;
   }
@@ -44,6 +49,7 @@ a{
 }
 
 ul{
+  margin: 0;
   li{
     a{
       color: $purple;
@@ -53,4 +59,8 @@ ul{
       }
     }
   }
+}
+
+strong{
+  font-weight: $weightBold;
 }
