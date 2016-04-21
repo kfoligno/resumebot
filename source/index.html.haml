@@ -16,8 +16,8 @@ title: ResumeBot Converts Resumes from PDF
 
 .hero.centered
   .bounce
-    .shapesSolid{"data-parallaxify-background-range" => "100"}
-    .shapesLined{"data-parallaxify-background-range" => "-100"}
+    .shapesSolid{'data-parallaxify-background-range' => '100'}
+    .shapesLined{'data-parallaxify-background-range' => '-100'}
   .vp.container
     = image_tag '/images/logo.gif'
     %h1  Format résumés faster.
@@ -103,7 +103,7 @@ title: ResumeBot Converts Resumes from PDF
         %p= "Find everything you need to start using ResumeBot in the #{link_to 'Knowledge Base', 'https://resumebot.uservoice.com/knowledgebase', target: '_blank'}."
     .accordionSection
       %h3
-        = link_to "ResumeBot won't format the file I submitted. What gives?", '#accordion-5', class: 'accordionTitle'
+        = link_to 'ResumeBot won\'t format the file I submitted. What gives?', '#accordion-5', class: 'accordionTitle'
         %span
       #accordion-5.accordionContent
         %p If you receive an error, please double-check that the resume is text-based. ResumeBot can’t read text that is in an image-based file, such as scanned documents or photos. So even if your file is a PDF, if there is not a selectable text area in it because it was created from an image file, ResumeBot will not be able to help you format it.
@@ -146,6 +146,9 @@ title: ResumeBot Converts Resumes from PDF
       %p.people Christine Schulte, Recruiter
 
 .footer.centered
-  .logomark
-    = image_tag '/images/ignite-logomark_2x.png'
-  %p= "Developed by #{link_to 'Ignite', 'http://www.ignitewithus.com/', target: '_blank'}, the innovation lab for Adecco Group"
+  .bounce
+    .shapesLined{'data-parallaxify-background-range' => '200'}
+  .ignite
+    .logomark
+      = image_tag '/images/ignite-logomark_2x.png'
+    %p= "Developed by #{link_to 'Ignite', 'http://www.ignitewithus.com/', target: '_blank'}, the innovation lab for Adecco Group"

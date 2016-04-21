@@ -1,9 +1,12 @@
 .footer{
   @include padding(200px 0);
   @include background($purple);
-  @include background-image(url('/images/shapes-footer.png'));
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow:hidden;
+  position:relative;
+  .ignite{
+    position:relative;
+    z-index:50;
+  }
   .logomark{
     @include size(122px);
     @include margin(0 auto);
@@ -22,5 +25,13 @@
     &:hover{
       color: tint($green, 30%);
     }
+  }
+  .shapesLined{
+    @include retina-image(/images/shapes-footer, 1308px 397px);
+    background-position:center;
+    @include size(100% 100%);
+    position:absolute;
+    top:0;
+    left:0;
   }
 }

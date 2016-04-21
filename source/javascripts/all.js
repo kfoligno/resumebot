@@ -59,7 +59,7 @@ $(document).ready(function() {
 
   $(function() {
     $('.accordion .accordionTitle').click(function() {
-      
+
         var openAccordion = $('.accordion .accordionTitle').is('.active');
 
         if (openAccordion) {
