@@ -34,6 +34,8 @@ $breakXLarge: 1400px;
 
 // $breakHeight: 1000px;
 
+@retina-image($filename, $background-size, $extension, $retina-filename, $retina-suffix, $asset-pipeline*);
+
 //global
 *{
   -webkit-box-sizing: border-box;

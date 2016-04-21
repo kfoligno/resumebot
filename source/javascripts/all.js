@@ -71,7 +71,18 @@ $(document).ready(function() {
 
   // Dots
 
-  $.parallaxify({
+  // $.parallaxify({
+  //   positionProperty: 'transform',
+  //   responsive: true,
+  //   motionType: 'natural',
+  //   mouseMotionType: 'gaussian',
+  //   motionAngleX: 80,
+  //   motionAngleY: 80,
+  //   alphaFilter: 0.5,
+  //   adjustBasePosition: true,
+  //   alphaPosition: 0.025,
+  // });
+  $('.bounce').parallaxify({
     positionProperty: 'transform',
     responsive: true,
     motionType: 'natural',

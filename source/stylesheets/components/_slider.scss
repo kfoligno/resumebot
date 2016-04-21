@@ -5,8 +5,7 @@
     @include background-image(url('/images/icon-quote-left.png'));
     background-repeat: no-repeat;
     display: block;
-    width: 64px;
-    height: 54px;
+    @include size(64px 54px);
     left: 20%;
     top:70px;
     position: absolute;
@@ -22,8 +21,7 @@
     @include background-image(url('/images/icon-quote-right.png'));
     background-repeat: no-repeat;
     display: block;
-    width: 64px;
-    height: 54px;
+    @include size(64px 54px);
     right: 20%;
     bottom:70px;
     position: absolute;
@@ -44,12 +42,11 @@
     display: block;
     text-align: center;
     @include padding(null);
-    width: 100%;
+    @include size(100% auto);
     li {
         position: relative;
         display: inline-block;
-        height: 20px;
-        width: 20px;
+        @include size(20px);
         @include margin(0 5px);
         @include padding(0);
         cursor: pointer;
@@ -57,8 +54,7 @@
             border: 0;
             @include background(transparent);
             display: block;
-            height: 20px;
-            width: 20px;
+            @include size(20px);
             outline: none;
             line-height: 0px;
             font-size: 0px;
@@ -76,21 +72,18 @@
                 top: 0;
                 left: 0;
                 content: "•";
-                width: 20px;
-                height: 20px;
+                @include size(20px);
                 font-family: $openSans;
                 font-size: 30px;
                 line-height: 20px;
                 text-align: center;
-                color: $greenLight;
-                opacity: .5;
+                color: tint($greenLight, 40%);
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
         }
         &.slick-active button:before {
             color: $greenLight;
-            opacity: 1;
         }
     }
 }

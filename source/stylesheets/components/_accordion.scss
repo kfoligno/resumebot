@@ -18,13 +18,13 @@
 }
 
 .accordionTitle{
-  width:100%;
+  @include size(100% auto);
   @include padding(30px);
-  display:inline-block;
   @include transition(all .15s linear);
   color: tint($purple, 20%);
+  display:inline-block;
   outline:none;
-  &:hover{
+  &:hover, &:focus, &:active{
     color:$purple
   }
   &:focus{

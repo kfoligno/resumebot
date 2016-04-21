@@ -15,8 +15,9 @@ title: ResumeBot Converts Resumes from PDF
           = link_to 'Testimonials', '#testimonials'
 
 .hero.centered
-  .shapesSolid
-  .shapesLined
+  .bounce
+    .shapesSolid{"data-parallaxify-background-range" => "100"}
+    .shapesLined{"data-parallaxify-background-range" => "-100"}
   .vp.container
     = image_tag '/images/logo.gif'
     %h1  Format résumés faster.
@@ -89,16 +90,19 @@ title: ResumeBot Converts Resumes from PDF
     .accordionSection
       %h3
         = link_to 'What are the technical requirements?', '#accordion-3', class: 'accordionTitle'
+        %span
       #accordion-3.accordionContent
         %p All you need to use ResumeBot is the ability to send and receive emails through an Adecco business email account. ResumeBot can parse most Microsoft Word documents (versions 2005 and newer), Adobe PDF and other common text formats. Test it to see!
     .accordionSection
       %h3
         = link_to 'Where can I find training and promotional materials for ResumeBot?', '#accordion-4', class: 'accordionTitle'
+        %span
       #accordion-4.accordionContent
         %p= "Find everything you need to start using ResumeBot in the #{link_to 'Knowledge Base', 'https://resumebot.uservoice.com/knowledgebase', target: '_blank'}."
     .accordionSection
       %h3
         = link_to "ResumeBot won't format the file I submitted. What gives?", '#accordion-5', class: 'accordionTitle'
+        %span
       #accordion-5.accordionContent
         %p If you receive an error, please double-check that the resume is text-based. ResumeBot can’t read text that is in an image-based file, such as scanned documents or photos. So even if your file is a PDF, if there is not a selectable text area in it because it was created from an image file, ResumeBot will not be able to help you format it.
         %br
@@ -106,16 +110,19 @@ title: ResumeBot Converts Resumes from PDF
     .accordionSection
       %h3
         = link_to 'Why does ResumeBot move or drop some information?', '#accordion-6', class: 'accordionTitle'
+        %span
       #accordion-6.accordionContent
         %p ResumeBot is programmed to organize content according to industry standards, so some information may be moved or dropped if it's not easily understood by a computer. Carefully review your converted files to make sure all of the information you need displays where you need it.
     .accordionSection
       %h3
         = link_to 'Does ResumeBot check spelling and grammar?', '#accordion-7', class: 'accordionTitle'
+        %span
       #accordion-7.accordionContent
         %p ResumeBot simply converts your existing text, it is not programmed to correct spelling and grammar. (That is a different robot entirely.)
     .accordionSection
       %h3
         = link_to 'What can candidates do to ensure their resumes are machine-readable?', '#accordion-8', class: 'accordionTitle'
+        %span
       #accordion-8.accordionContent
         %p= "#{link_to 'View tips', 'https://sovren.com/faq/TipsForElectronicResumes.pdf', target: '_blank'} for electronic resumes."
 

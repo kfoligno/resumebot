@@ -48,9 +48,26 @@
 
 
 .hero{
-  @include background-image(url('/images/shapes-hero-background.png'));
-  background-position: center;
-  background-repeat: no-repeat;
+  position:relative;
+  .shapesSolid{
+    @include retina-image(/images/solid, 1222px 711px);
+    background-position:center;
+    @include size(100% 100vh);
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  .shapesLined{
+    @include retina-image(/images/lined, 1205px 690px);
+    background-position:center;
+    @include size(100% 100vh);
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  // @include background-image(url('/images/shapes-hero-background.png'));
+  // background-position: center;
+  // background-repeat: no-repeat;
   height:100vh;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -71,8 +88,7 @@
     @include margin(2px 0 0 0);
   }
   img{
-    height: 150px;
-    width: 150px;
+    @include size(150px);
     display: block;
     @include margin(0 auto);
   }
@@ -110,8 +126,7 @@
 .illoLg{
   img{
     max-width:400px;
-    height:auto;
-    width:100%;
+    @include size(100% auto);
   }
   @media screen and (max-width: $breakMedium) {
     text-align:center;
@@ -122,8 +137,7 @@
   @include margin(0 auto 50px auto);
   text-align: center;
   img{
-    width:200px;
-    height:auto;
+    @include size(200px auto);
   }
 }
 
@@ -157,7 +171,7 @@
     .block{
       @include padding(100px 5% 50px 5%);
       @media screen and (max-width: $breakMedium) {
-        padding:0 5%;
+        @include padding(0 5%);
       }
     }
   }
@@ -172,7 +186,7 @@
   }
   .block{
     @media screen and (max-width: $breakMedium) {
-      width:100%;
+      @include size(100% auto);
       float:none;
     }
     &.copy{
@@ -204,7 +218,7 @@
       @include margin(0 auto);
     }
     @media screen and (max-width: $breakSmall) {
-      width:100%;
+      @include size(100% auto);
       @include padding(50px 5%);
       p{
         max-width:560px;
