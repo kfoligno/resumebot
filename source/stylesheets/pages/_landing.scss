@@ -24,6 +24,7 @@
     .navLinks{
       text-align:right;
       float:right;
+      @include padding(4px null);
       ul{
         list-style:none;
         @include margin(0);
@@ -46,7 +47,6 @@
   }
 }
 
-
 .hero{
   position:relative;
   .shapesSolid{
@@ -56,6 +56,9 @@
     position:absolute;
     top:0;
     left:0;
+    @media screen and (max-width: 773px) {
+      @include size(100%);
+    }
   }
   .shapesLined{
     @include retina-image(/images/lined, 1205px 690px);
@@ -64,10 +67,10 @@
     position:absolute;
     top:0;
     left:0;
+    @media screen and (max-width: 773px) {
+      @include size(100%);
+    }
   }
-  // @include background-image(url('/images/shapes-hero-background.png'));
-  // background-position: center;
-  // background-repeat: no-repeat;
   height:100vh;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -76,14 +79,6 @@
     height:auto;
     @include padding(100px 5%);
   }
-  // @media screen and (max-height: $breakHeight) {
-  //   height:auto;
-  //   padding:100px 5%;
-  // }
-  // @media screen and ( min-width: 1024px ) and ( max-height: 768px ){
-  //     height:100vh;
-  //     padding:0;
-  // }
   h1{
     @include margin(2px 0 0 0);
   }
@@ -102,14 +97,6 @@
       top:0;
       transform: none;
     }
-    // @media screen and (max-height: $breakHeight) {
-    //   top: 0;
-    //   transform: none;
-    // }
-    // @media screen and ( min-width: 1024px ) and ( max-height: 768px ){
-    //   top: 50%;
-    //   transform: translateY(-50%);
-    // }
     p{
       font-size:1.6em;
       @include margin(25px auto 35px auto);
@@ -123,7 +110,7 @@
   }
 }
 
-.illoLg{
+.illustrationLarge{
   img{
     max-width:400px;
     @include size(100% auto);
@@ -133,7 +120,7 @@
   }
 }
 
-.illoSm{
+.illustrationSmall{
   @include margin(0 auto 50px auto);
   text-align: center;
   img{
@@ -151,7 +138,7 @@
         padding:0 5%;
       }
     }
-    .illoLg{
+    .illustrationLarge{
       float:right;
       @media screen and (max-width: $breakMedium) {
         float:none;
@@ -159,7 +146,7 @@
     }
   }
   &.works{
-    .illoLg{
+    .illustrationLarge{
       float:left;
       @media screen and (max-width: $breakMedium) {
         float:none;

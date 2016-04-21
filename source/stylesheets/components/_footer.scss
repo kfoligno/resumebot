@@ -20,7 +20,7 @@
   a{
     color:$green;
     &:hover{
-      color:$greenLight;
+      color: tint($green, 30%);
     }
   }
 }

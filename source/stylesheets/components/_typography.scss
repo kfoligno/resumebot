@@ -46,6 +46,7 @@ a{
   @include transition(all .2s ease-in-out);
   &:hover, &:focus, &:active{
     color: tint($green, 30%);
+    outline:none;
   }
 }
 

@@ -6,29 +6,38 @@
 }
 
 .accordionSection{
-  @include margin(nul null 30px null);
+  @include margin(null null 30px null);
   @include background($blueLight);
   border-radius:5px;
   &:last-child{
-    @include margin(nul null 0 null);
+    @include margin(null null 0 null);
   }
   h3{
     @include margin(0);
+    position:relative;
+    span{
+      @include triangle(14px, $blue, down);
+      border-radius:5px;
+      display:block;
+      position: absolute;
+      top: 44%;
+      right: 30px;
+      @include transition(all .3s ease-in-out);
+      &.open{
+        @include transform(rotate(-180deg));
+      }
+    }
   }
 }
 
 .accordionTitle{
   @include size(100% auto);
-  @include padding(30px);
+  @include padding(30px 60px 30px 30px);
   @include transition(all .15s linear);
   color: tint($purple, 20%);
   display:inline-block;
-  outline:none;
   &:hover, &:focus, &:active{
     color:$purple
-  }
-  &:focus{
-    outline:none;
   }
   &.active{
     color:$purple;

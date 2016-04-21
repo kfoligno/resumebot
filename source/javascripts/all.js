@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
   // Setup smooth scroll for navigation
-  $('.navLinks a[href*="#"]:not([href="#"])').click(function() {
+  $('.nav a[href*="#"]:not([href="#"]), .vp a[href*="#"]:not([href="#"])').click(function() {
 
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
@@ -34,17 +34,17 @@ $(document).ready(function() {
   // Accordion
   $(function() {
     function close_accordion_section() {
-        $('.accordion .accordionTitle').removeClass('active');
+        $('.accordion .accordionTitle, .accordion h3').removeClass('active');
         $('.accordion .accordionContent').slideUp(300).removeClass('open');
     }
 
     $('.accordionTitle').click(function(e) {
-        // Grab current anchor value
+
         var currentAttrValue = $(this).attr('href');
 
-        if($(e.target).is('.active')) {
+        if ($(e.target).is('.active')) {
             close_accordion_section();
-        }else {
+        } else {
             close_accordion_section();
 
             // Add active class to section title
@@ -56,6 +56,20 @@ $(document).ready(function() {
         e.preventDefault();
     });
   });
+
+  $(function() {
+    $('.accordion .accordionTitle').click(function() {
+      
+        var openAccordion = $('.accordion .accordionTitle').is('.active');
+
+        if (openAccordion) {
+            $(this).siblings('.accordion h3 span').addClass('open');
+        } else {
+            $(this).siblings('.accordion h3 span').removeClass('open');
+        }
+
+    });
+});
 
   // Testimonials Slider
   $('.slider').slick({
@@ -69,24 +83,12 @@ $(document).ready(function() {
     autoplaySpeed: 9000
   });
 
-  // Dots
-
-  // $.parallaxify({
-  //   positionProperty: 'transform',
-  //   responsive: true,
-  //   motionType: 'natural',
-  //   mouseMotionType: 'gaussian',
-  //   motionAngleX: 80,
-  //   motionAngleY: 80,
-  //   alphaFilter: 0.5,
-  //   adjustBasePosition: true,
-  //   alphaPosition: 0.025,
-  // });
+  // Mouse Follow Parallax
   $('.bounce').parallaxify({
     positionProperty: 'transform',
     responsive: true,
     motionType: 'natural',
-    mouseMotionType: 'gaussian',
+    mouseMotionType: 'natural',
     motionAngleX: 80,
     motionAngleY: 80,
     alphaFilter: 0.5,
