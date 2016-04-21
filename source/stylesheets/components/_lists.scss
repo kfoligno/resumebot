@@ -1,16 +1,15 @@
 ul{
-  margin: 0;
-  padding:0 2.5%;
+  @include margin(0);
+  @include padding(0 2.5%);
   color:$grey;
   @media screen and (max-width: $breakSmall) {
-    padding:0 5%;
+    @include padding(0 5%);
   }
   li{
     a{
-      color: $purple;
-      opacity: .7;
+      color: tint($purple, 30%);
       &:hover{
-        opacity: 1;
+        color: $purple;
       }
     }
   }

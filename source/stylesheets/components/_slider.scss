@@ -2,7 +2,7 @@
   @include clearfix;
   &:before{
     content:'';
-    background-image:url('/images/icon-quote-left.png');
+    @include background-image(url('/images/icon-quote-left.png'));
     background-repeat: no-repeat;
     display: block;
     width: 64px;
@@ -19,7 +19,7 @@
   }
   &:after{
     content:'';
-    background-image:url('/images/icon-quote-right.png');
+    @include background-image(url('/images/icon-quote-right.png'));
     background-repeat: no-repeat;
     display: block;
     width: 64px;
@@ -43,19 +43,19 @@
     list-style: none;
     display: block;
     text-align: center;
-    padding: 0;
+    @include padding(null);
     width: 100%;
     li {
         position: relative;
         display: inline-block;
         height: 20px;
         width: 20px;
-        margin: 0 5px;
-        padding: 0;
+        @include margin(0 5px);
+        @include padding(0);
         cursor: pointer;
         button {
             border: 0;
-            background: transparent;
+            @include background(transparent);
             display: block;
             height: 20px;
             width: 20px;
@@ -63,7 +63,7 @@
             line-height: 0px;
             font-size: 0px;
             color: transparent;
-            padding: 5px;
+            @include padding(5px);
             cursor: pointer;
             &:hover, &:focus {
                 outline: none;

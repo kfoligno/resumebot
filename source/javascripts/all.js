@@ -20,6 +20,7 @@ $(document).ready(function() {
     }
   });
 
+  // Fixed Header
   $(window).scroll(function() {
       var scroll = $(window).scrollTop();
 
@@ -62,7 +63,24 @@ $(document).ready(function() {
     arrows: false,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    infitine:true,
+    autoplay: true,
+    autoplaySpeed: 9000
+  });
+
+  // Dots
+
+  $.parallaxify({
+    positionProperty: 'transform',
+    responsive: true,
+    motionType: 'natural',
+    mouseMotionType: 'gaussian',
+    motionAngleX: 80,
+    motionAngleY: 80,
+    alphaFilter: 0.5,
+    adjustBasePosition: true,
+    alphaPosition: 0.025,
   });
 
 });

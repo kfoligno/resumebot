@@ -19,7 +19,7 @@ h2 {
   font-family:$varelo;
   font-size: 1.75em;
   font-weight: 400;
-  margin: 0;
+  @include margin(0);
   @media screen and (max-width: $breakXSmall) {
     font-size:1.5em;
   }
@@ -30,7 +30,7 @@ h3 {
   font-family:$varelo;
   font-size: 1.25em;
   font-weight: 400;
-  margin: 0;
+  @include margin(0);
   a{
     color: $purple;
   }
@@ -43,8 +43,9 @@ a{
   text-decoration: none;
   outline:none;
   color: $green;
+  @include transition(all .2s ease-in-out);
   &:hover, &:focus, &:active{
-    outline:none;
+    color: tint($green, 30%);
   }
 }
 

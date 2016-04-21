@@ -1,14 +1,21 @@
 .footer{
-  padding: 200px 0;
-  background-color: $purple;
-  background-image:url('/images/shapes-footer.png');
+  @include padding(200px 0);
+  @include background($purple);
+  @include background-image(url('/images/shapes-footer.png'));
   background-position: center;
   background-repeat: no-repeat;
+  .logomark{
+    @include size(122px);
+    @include margin(0 auto);
+    img{
+      @include size(100% auto);
+    }
+  }
   p{
     color:$white;
     font-weight: $weightLight;
-    padding:45px 5% 0 5%;
-    margin:0;
+    @include padding(45px 5% 0 5%);
+    @include margin(0);
   }
   a{
     color:$green;

@@ -2,15 +2,16 @@
   font-size:1.1em;
   text-decoration: none;
   color:$white;
-  background:$green;
+  @include background($green);
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
   border-radius: 60px;
-  padding:10px 30px;
-  margin: 20px 0 0 0;
+  @include padding(10px 30px);
+  @include margin(20px 0 0 0);
   display: inline-block;
   @include transition(all .2s ease-in-out);
   &:hover, &:focus, &:active{
-    opacity: .9;
+    background: tint($green, 15%);
+    color:$white;
   }
 }
