@@ -19,6 +19,9 @@
     font-weight: $weightLight;
     @include padding(45px 5% 0 5%);
     @include margin(0);
+    @media screen and (max-width: $breakSmall) {
+      font-weight: $weightReg;
+    }
   }
   a{
     color:$green;

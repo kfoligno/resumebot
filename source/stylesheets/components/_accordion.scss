@@ -54,6 +54,9 @@
     color: $grey;
     @include margin(0);
     @media screen and (max-width: $breakSmall) {
+      font-weight: $weightReg;
+    }
+    @media screen and (max-width: $breakSmall) {
       font-size:1.1em;
     }
   }

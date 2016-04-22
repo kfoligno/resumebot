@@ -103,6 +103,9 @@
       font-weight: $weightLight;
       max-width:900px;
       line-height:1.6;
+      @media screen and (max-width: $breakSmall) {
+        font-weight: $weightReg;
+      }
       @media screen and (max-width: $breakXSmall) {
         font-size:1.2em;
       }
@@ -167,6 +170,9 @@
     font-size:1.3em;
     line-height:1.6;
     font-weight: $weightLight;
+    @media screen and (max-width: $breakSmall) {
+      font-weight: $weightReg;
+    }
     @media screen and (max-width: $breakXSmall) {
       font-size: 1.2em;
     }
@@ -193,6 +199,9 @@
   line-height: 1.5;
   @media screen and (max-width: $breakMedium) {
     @include padding(150px 0 0 0);
+  }
+  @media screen and (max-width: $breakSmall) {
+    font-weight: $weightReg;
   }
   @media screen and (max-width: $breakXSmall) {
     font-size:1.2em;
@@ -251,6 +260,9 @@
     font-size:1.8em;
     font-weight: $weightLight;
     color: $grey;
+    @media screen and (max-width: $breakSmall) {
+      font-weight: $weightReg;
+    }
     @media screen and (max-width: $breakXSmall) {
       font-size:1.3em;
     }
@@ -260,6 +272,9 @@
     color: $blue;
     @include margin(null null 0 null);
     font-weight: $weightLight;
+    @media screen and (max-width: $breakSmall) {
+      font-weight: $weightReg;
+    }
     @media screen and (max-width: $breakXSmall) {
       font-size:1.2em;
     }
