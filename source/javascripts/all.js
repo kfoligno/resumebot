@@ -88,7 +88,7 @@ $(document).ready(function() {
     positionProperty: 'transform',
     responsive: true,
     motionType: 'natural',
-    mouseMotionType: 'natural',
+    mouseMotionType: 'gaussian',
     motionAngleX: 80,
     motionAngleY: 80,
     alphaFilter: 0.5,
